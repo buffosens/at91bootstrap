@@ -88,6 +88,10 @@
 #include "sama5d3_xplained.h"
 #endif
 
+#ifdef CONFIG_SCC_AIR_V2
+#include "scc-air-v2.h"
+#endif
+
 #ifdef CONFIG_SAMA5D3X_CMP
 #include "sama5d3x_cmp.h"
 #endif
