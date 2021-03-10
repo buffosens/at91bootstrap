@@ -35,12 +35,13 @@
 #define DUMP_WIDTH_BIT_8	1
 #define DUMP_WIDTH_BIT_32	2
 
+#define BOOTSTRAP_DEBUG_LEVEL 4
 #ifdef CONFIG_DEBUG
 extern int dbg_printf(const char *fmt_str, ...);
 extern void dbg_hexdump(const unsigned char *buf,
 			unsigned int size, unsigned int width);
 #else
-#define BOOTSTRAP_DEBUG_LEVEL 4
+// #define BOOTSTRAP_DEBUG_LEVEL 4
 
 #include "usart.h"
 
