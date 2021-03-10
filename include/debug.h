@@ -40,7 +40,7 @@ extern int dbg_printf(const char *fmt_str, ...);
 extern void dbg_hexdump(const unsigned char *buf,
 			unsigned int size, unsigned int width);
 #else
-#define BOOTSTRAP_DEBUG_LEVEL 0
+#define BOOTSTRAP_DEBUG_LEVEL 4
 
 #include "usart.h"
 

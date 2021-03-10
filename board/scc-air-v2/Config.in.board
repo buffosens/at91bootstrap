@@ -1,5 +1,5 @@
 config SCC_AIR_V2
-	bool "scc-air-v2""
+	bool "scc-air-v2"
 	select SAMA5D3X
 	select DDRC
 	select ALLOW_NANDFLASH
