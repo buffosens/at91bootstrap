@@ -967,6 +967,8 @@ static int nand_loadimage(struct nand_info *nand,
 	division(offset, nand->blocksize, &block, &start_page);
 	start_page = div(start_page, nand->pagesize);
 
+	dbg_info("-- length: 0x%x, block remaining: 0x%x, pagesize: 0x%x, blocksize: nand->blocksize 0x%x\n", length, block_remaining, nand->pagesize, nand->blocksize);
+
 	while (length > 0) {
 		/* read a buffer corresponding to a block */
 		if (length < block_remaining)
@@ -980,6 +982,7 @@ static int nand_loadimage(struct nand_info *nand,
 			numpages++;
 
 		end_page = start_page + numpages;
+		dbg_info("-- start_page: 0x%x, numpages: 0x%x, end_page: 0x%x\n", start_page, numpages, end_page);
 
 		/* check the bad block */
 		while (1) {
